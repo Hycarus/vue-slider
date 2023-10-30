@@ -51,7 +51,12 @@ methods: {
     },
     isActive(index){
         return (index === this.activeIndex) ? "active" : "";
-    }
-
-}
+    },
+    change(index){
+        this.activeIndex = index;
+    },
+},
+mounted(){
+    autoChange = setInterval(this.nextSlide, 2000);
+},
 }).mount('#app')
