@@ -49,5 +49,9 @@ methods: {
             this.activeIndex -= 1;
         }
     },
+    isActive(index){
+        return (index === this.activeIndex) ? "active" : "";
+    }
+
 }
 }).mount('#app')
